@@ -67,8 +67,9 @@ export default {
 
 <style scoped>
 .Themes {
+  position: relative;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 .Themes > ul {
   display: flex;
@@ -111,17 +112,30 @@ export default {
   padding: 13px 12px;
   width: 31px;
   height: 28px;
-  border-radius: 48%;
+  border-radius: 50%;
+  animation: rotation 15s infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .Themes > ul li h2 {
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   margin: 10px 0px;
+  letter-spacing: 1.5px;
 }
 .Themes > ul li p {
   font-family: "Roboto", sans-serif;
   line-height: 20px;
   font-size: 1rem;
+  color: #626881;
+  transition-duration: 0.4s;
 }
 
 .Themes > ul > li:nth-child(2) {
@@ -136,17 +150,54 @@ export default {
   list-style-type: none;
 }
 .Themes > ul > li:nth-child(2) ul li:nth-of-type(1) img {
+  position: relative;
   background: -webkit-linear-gradient(
     170deg,
     rgb(139, 203, 243),
     rgb(33, 140, 182)
   );
-  background: linear-gradient(170deg, rgb(253, 79, 79), rgb(253, 210, 210));
+  background: linear-gradient(170deg, rgb(243, 43, 43), rgb(252, 185, 185));
   margin: 0 auto;
   padding: 13px 12px;
   width: 31px;
   height: 28px;
   border-radius: 48%;
+}
+.Themes > ul > li:nth-child(2) ul li:nth-of-type(1) p {
+  position: relative;
+}
+.Themes > ul > li:nth-child(2) ul li:nth-of-type(1) p::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(231, 76, 76);
+
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: travel infinite 4s;
+}
+
+@keyframes travel {
+  0% {
+    opacity: 0;
+    top: -100px;
+    left: 0;
+  }
+  40% {
+    opacity: 1;
+    top: -70px;
+    left: 90px;
+  }
+  70% {
+    opacity: 1;
+    top: -60px;
+    left: 80px;
+  }
+  100% {
+    opacity: 0;
+    top: 50px;
+    left: 0;
+  }
 }
 
 .Themes > ul > li:nth-child(2) ul li:nth-of-type(2) {
@@ -184,7 +235,7 @@ export default {
     rgb(139, 203, 243),
     rgb(33, 140, 182)
   );
-  background: linear-gradient(170deg, rgb(48, 156, 44), rgb(253, 210, 210));
+  background: linear-gradient(170deg, rgb(65, 190, 7), rgb(212, 255, 183));
   margin: 0 auto;
   padding: 13px 12px;
   width: 31px;

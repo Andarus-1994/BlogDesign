@@ -21,7 +21,7 @@ h1 {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #18212b;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 h1::after {
   content: "";

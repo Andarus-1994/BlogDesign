@@ -29,6 +29,6 @@ body {
   color: #2c3e50;
   padding: 0;
   margin: 0;
-  height: 1200px;
+  height: 1500px;
 }
 </style>
