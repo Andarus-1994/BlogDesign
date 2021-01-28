@@ -4,7 +4,7 @@
       <nav ref="navTrigger" v-if="showNav">
         <div class="Logo">Blogs</div>
         <ul>
-          <router-link exact active-class="active" to="/"
+          <router-link exact active-class="active" to="/BlogDesign"
             ><li>Home</li></router-link
           >
           <router-link to="/news" active-class="active"
