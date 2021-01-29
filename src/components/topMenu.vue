@@ -1,31 +1,30 @@
 <template>
   <div class="topMenu">
-    <transition-group name="fade" v-if="showNav">
-      <nav ref="navTrigger" v-if="showNav">
-        <div class="Logo">Blogs</div>
-        <ul>
-          <router-link exact active-class="active" to="/BlogDesign"
-            ><li>Home</li></router-link
-          >
-          <router-link to="/news" active-class="active"
-            ><li>News</li></router-link
-          >
-          <router-link to="/blogs" active-class="active"
-            ><li>Blogs</li></router-link
-          >
-          <router-link to="/events" active-class="active"
-            ><li>Events</li></router-link
-          >
-        </ul>
-        <div class="space"></div>
-      </nav>
-    </transition-group>
+    <nav ref="navTrigger" v-if="showNav">
+      <div class="Logo">Blogs</div>
+      <ul>
+        <router-link exact active-class="active" to="/BlogDesign"
+          ><li>Home</li></router-link
+        >
+        <router-link to="/news" active-class="active"
+          ><li>News</li></router-link
+        >
+        <router-link to="/blogs" active-class="active"
+          ><li>Blogs</li></router-link
+        >
+        <router-link to="/events" active-class="active"
+          ><li>Events</li></router-link
+        >
+      </ul>
+      <div class="space"></div>
+    </nav>
 
     <div class="limit" ref="navTrigger"></div>
     <div
       class="spaceLimit"
       v-bind:style="[showNav ? { marginTop: '0px' } : { marginTop: '200px' }]"
     ></div>
+
     <div class="nav" v-if="!showNav">
       <div class="Logo">Blogs</div>
       <ul>
@@ -81,16 +80,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .limit {
-  height: 10px;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
+  height: 20px;
 }
 
 /* Here Starts the small nav */
@@ -177,8 +167,9 @@ a:focus::after {
 /* Big Nav */
 .nav {
   position: fixed;
-  top: 0;
+  top: 0px;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 2px 10px 3px rgb(22, 32, 53);
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -189,6 +180,40 @@ a:focus::after {
   width: 100%;
   font-family: "Julius Sans One", sans-serif;
   z-index: 10;
+  animation: bounceMenu 1s 1;
+  transition-duration: 0.6s;
+}
+
+@keyframes bounceMenu {
+  0% {
+    box-shadow: none;
+    top: -50px;
+  }
+  60% {
+    top: 5px;
+  }
+  80% {
+    box-shadow: none;
+    top: -3px;
+  }
+  88% {
+    top: -1px;
+  }
+  93% {
+    top: -3px;
+  }
+  95% {
+    top: -1px;
+  }
+  97% {
+    top: -3px;
+  }
+  98% {
+    top: -1px;
+  }
+  100% {
+    top: 0px;
+  }
 }
 .nav > .Logo {
   margin: 6px 40px;

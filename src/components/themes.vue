@@ -6,7 +6,7 @@
           <img :src="travel" />
           <h2>Travel</h2>
           <p>
-            We all love traveling from time to time. This Vlog will help you!
+            We all love traveling from time to time. This Blog will help you!
           </p>
         </router-link>
       </li>
