@@ -22,7 +22,7 @@
     <div class="limit" ref="navTrigger"></div>
     <div
       class="spaceLimit"
-      v-bind:style="[showNav ? { marginTop: '0px' } : { marginTop: '200px' }]"
+      v-bind:style="[showNav ? { marginTop: '0px' } : { marginTop: '100px' }]"
     ></div>
 
     <div class="nav" v-if="!showNav">
@@ -82,15 +82,18 @@ export default {
 .limit {
   height: 20px;
 }
+.topMenu {
+  position: relative;
+  overflow: hidden;
+}
 
 /* Here Starts the small nav */
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 auto;
   margin-top: 50px;
-  width: 80%;
-  max-width: 1200px;
+  width: 100%;
   font-family: "Julius Sans One", sans-serif;
 }
 nav > .Logo {
@@ -98,8 +101,8 @@ nav > .Logo {
   color: rgb(35, 73, 90);
   font-family: "Playfair Display SC", serif;
   font-size: 2rem;
-  margin-left: 30px;
-  margin-right: 60px;
+  margin-left: 0px;
+  margin-right: 70px;
 }
 nav > .space {
   width: 10%;
@@ -169,7 +172,7 @@ a:focus::after {
   position: fixed;
   top: 0px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 2px 10px 3px rgb(22, 32, 53);
+  box-shadow: 0px -2px 8px 1px rgb(22, 32, 53);
   display: flex;
   justify-content: space-between;
   margin: 0 auto;

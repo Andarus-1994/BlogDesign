@@ -1,14 +1,17 @@
 <template>
+  <Welcome />
   <h1>Themes of the Blogs</h1>
   <Themes />
 </template>
 
 <script>
 import Themes from "../components/themes.vue";
+import Welcome from "../components/Welcome.vue";
 export default {
   name: "Home",
   components: {
     Themes,
+    Welcome,
   },
 };
 </script>
@@ -21,7 +24,7 @@ h1 {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #18212b;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 h1::after {
   content: "";

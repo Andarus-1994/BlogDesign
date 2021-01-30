@@ -74,7 +74,7 @@ export default {
 .Themes > ul {
   display: flex;
   list-style-type: none;
-  width: 800px;
+  width: 900px;
   height: 500px;
   margin: 0 auto;
 }
@@ -96,7 +96,7 @@ export default {
   display: flex;
   flex-direction: column;
   height: 150px;
-  width: 170px;
+  width: 240px;
   padding: 10px 20px;
   text-align: center;
   margin-top: 100px;
@@ -132,9 +132,11 @@ export default {
 }
 .Themes > ul li p {
   font-family: "Roboto", sans-serif;
-  line-height: 20px;
-  font-size: 1rem;
-  color: #626881;
+  line-height: 25px;
+  font-size: 1.2rem;
+  font-weight: 300;
+
+  color: #83889c;
   transition-duration: 0.4s;
 }
 
@@ -142,7 +144,7 @@ export default {
   display: flex;
   flex-direction: column;
   height: 150px;
-  width: 250px;
+  width: 300px;
   padding: 10px 20px;
   text-align: center;
 }
@@ -210,7 +212,7 @@ export default {
     rgb(139, 203, 243),
     rgb(33, 140, 182)
   );
-  background: linear-gradient(170deg, rgb(190, 76, 235), rgb(253, 210, 210));
+  background: linear-gradient(170deg, rgb(90, 28, 114), rgb(185, 89, 250));
   margin: 0 auto;
   padding: 13px 12px;
   width: 31px;
@@ -222,7 +224,7 @@ export default {
   display: flex;
   flex-direction: column;
   height: 150px;
-  width: 200px;
+  width: 250px;
   padding: 10px 20px;
   text-align: center;
   margin-top: 100px;
