@@ -43,7 +43,6 @@
         </router-link>
       </li>
     </ul>
-    _
   </div>
 </template>
 
@@ -52,6 +51,7 @@ import book from "../assets/book.png";
 import travel from "../assets/travel.png";
 import life from "../assets/life.png";
 import cooking from "../assets/cooking.png";
+
 export default {
   name: "Themes",
   data: () => {
@@ -69,12 +69,29 @@ export default {
 .Themes {
   position: relative;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 0px;
+  opacity: 1;
+  animation: fadeInThemes 1s 1;
+}
+@keyframes fadeInThemes {
+  0% {
+    margin-top: -30px;
+
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
 }
 .Themes > ul {
   display: flex;
   list-style-type: none;
-  width: 900px;
+  width: 950px;
   height: 500px;
   margin: 0 auto;
 }
@@ -109,9 +126,9 @@ export default {
   );
   background: linear-gradient(170deg, rgb(164, 216, 248), rgb(33, 140, 182));
   margin: 0 auto;
-  padding: 13px 12px;
-  width: 31px;
-  height: 28px;
+  padding: 15px 14px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   animation: rotation 15s infinite;
 }
@@ -160,10 +177,10 @@ export default {
   );
   background: linear-gradient(170deg, rgb(243, 43, 43), rgb(252, 185, 185));
   margin: 0 auto;
-  padding: 13px 12px;
-  width: 31px;
-  height: 28px;
-  border-radius: 48%;
+  padding: 15px 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 .Themes > ul > li:nth-child(2) ul li:nth-of-type(1) p {
   position: relative;
@@ -172,7 +189,6 @@ export default {
   content: "";
   position: absolute;
   background-color: rgb(231, 76, 76);
-
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -188,12 +204,12 @@ export default {
   40% {
     opacity: 1;
     top: -70px;
-    left: 90px;
+    left: 115px;
   }
   70% {
     opacity: 1;
     top: -60px;
-    left: 80px;
+    left: 105px;
   }
   100% {
     opacity: 0;
@@ -214,10 +230,10 @@ export default {
   );
   background: linear-gradient(170deg, rgb(90, 28, 114), rgb(185, 89, 250));
   margin: 0 auto;
-  padding: 13px 12px;
-  width: 31px;
-  height: 28px;
-  border-radius: 48%;
+  padding: 15px 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .Themes > ul li:nth-child(3) {
@@ -239,23 +255,25 @@ export default {
   );
   background: linear-gradient(170deg, rgb(65, 190, 7), rgb(212, 255, 183));
   margin: 0 auto;
-  padding: 13px 12px;
-  width: 31px;
-  height: 28px;
-  border-radius: 48%;
+  padding: 15px 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 @media only screen and (max-width: 1000px) {
   .Themes > ul {
-    width: 300px;
-    height: 800px;
+    width: 400px;
+    height: 1000px;
     flex-direction: column;
   }
+
   .Themes > ul li:nth-child(1) {
     margin: 0 auto;
   }
   .Themes > ul li:nth-child(2) ul {
-    margin-left: -30px;
+    margin-top: 40px;
+    margin-left: 10px;
   }
   .Themes > ul li:nth-child(2) ul li:nth-of-type(2) {
     margin-top: 40px;
@@ -265,6 +283,7 @@ export default {
   }
   .Themes > ul li:nth-child(3) {
     margin: 0 auto;
+    margin-top: 40px;
     height: 200px;
   }
 }
