@@ -26,9 +26,9 @@ export default {
 
 <style scoped>
 .Welcome {
+  margin-top: 50px;
   position: relative;
-  background-color: rgb(255, 255, 255);
-  height: 500px;
+  height: 63vh;
   overflow: hidden;
 }
 /*
@@ -62,7 +62,7 @@ export default {
 }
 */
 .welcomeTitle {
-  background-image: url("../assets/test.jpg");
+  background-image: url("../assets/Journey.jpg");
   background-size: cover;
   background-blend-mode: luminosity;
   width: 60%;
@@ -83,8 +83,8 @@ h2 {
   line-height: 80px;
   font-weight: 900;
   font-family: "Playfair Display SC", serif;
-  margin-top: 80px;
-  margin-left: 25px;
+  margin: 0 auto;
+  margin-top: 10vh;
   padding: 10px 20px;
   z-index: 3;
   transform: rotate3d(1, 1, 1, -5deg);
@@ -99,11 +99,11 @@ h2::before {
   height: 100%;
   border-radius: 10px;
   z-index: -2;
-  background-color: rgba(236, 236, 236, 0.212);
+  background-color: rgba(255, 255, 255, 0.281);
 }
 
 .Button {
-  margin-top: 140px;
+  margin-top: 18vh;
   width: 100%;
   text-align: center;
 }
@@ -131,9 +131,15 @@ a {
     padding: 20px 0;
   }
   h2 {
+    color: rgb(255, 255, 255);
+    margin-left: 30px;
     width: 400px;
     font-size: 3rem;
     line-height: 40px;
+    transform: rotate3d(1, 1, 1, 0deg);
+  }
+  h2::before {
+    background-color: rgba(0, 0, 0, 0.418);
   }
   .Button {
     width: 500px;
