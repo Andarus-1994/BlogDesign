@@ -5,11 +5,15 @@
   <transition name="slide-fade">
     <Themes v-if="showThemes" />
   </transition>
+  <homeContent />
+  <homeContentTwo />
 </template>
 
 <script>
 import Themes from "../components/themes.vue";
 import Welcome from "../components/Welcome.vue";
+import homeContent from "../components/homeContent.vue";
+import homeContentTwo from "../components/homeContentTwo.vue";
 export default {
   name: "Home",
   data: () => {
@@ -36,6 +40,8 @@ export default {
   components: {
     Themes,
     Welcome,
+    homeContent,
+    homeContentTwo,
   },
 };
 </script>
@@ -52,13 +58,13 @@ h1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #18212b;
+  color: #461818;
   margin-top: 100px;
 }
 h1::after {
   content: "";
   position: absolute;
-  background-color: rgb(59, 163, 163);
+  background-color: rgb(105, 21, 28);
   opacity: 1;
   top: 50px;
   left: 0;
@@ -66,7 +72,7 @@ h1::after {
   margin-left: auto;
   margin-right: auto;
   width: 30px;
-  height: 1px;
+  height: 0.2vh;
   transition-duration: 0.4s;
 }
 </style>

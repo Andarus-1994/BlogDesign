@@ -100,14 +100,14 @@ export default {
 }
 .Themes > ul > li a {
   text-decoration: none;
-  color: rgb(19, 30, 53);
+  color: rgb(63, 18, 21);
   transition-duration: 0.6s;
 }
 .Themes > ul > li a:hover img {
   transform: rotate3d(200, 90, -55, 30deg);
 }
 .Themes > ul > li a:hover p {
-  color: rgb(30, 50, 88);
+  color: rgb(73, 10, 26);
 }
 .Themes > ul > li:nth-child(1) {
   display: flex;
@@ -153,7 +153,7 @@ export default {
   font-size: 1.2rem;
   font-weight: 300;
 
-  color: #83889c;
+  color: #9c8385;
   transition-duration: 0.4s;
 }
 

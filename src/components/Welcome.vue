@@ -2,7 +2,9 @@
   <div class="Welcome">
     <div class="cropWelcomeTop"></div>
     <div class="welcomeTitle">
-      <h2>Journey into My Blogs</h2>
+      <h2>
+        Traveling, cooking, books, life experiences. ALL 4 in 1 Blog.
+      </h2>
       <div class="Button">
         <router-link
           exact
@@ -28,7 +30,7 @@ export default {
 .Welcome {
   margin-top: 50px;
   position: relative;
-  height: 63vh;
+  height: 70vh;
   overflow: hidden;
 }
 /*
@@ -62,34 +64,34 @@ export default {
 }
 */
 .welcomeTitle {
-  background-image: url("../assets/Journey.jpg");
+  background-image: url("../assets/office.jpg");
   background-size: cover;
-  background-blend-mode: luminosity;
-  width: 60%;
+  background-position: center;
+  width: 100%;
   height: 100%;
   min-width: 900px;
   margin: 0 auto;
-  box-shadow: inset 2px 2px 20px 10px black;
+
   overflow: hidden;
 }
-h2:hover {
-  transform: rotate3d(1, 1, 1, 5deg);
-}
+
 h2 {
   position: relative;
-  color: rgb(15, 43, 65);
-  width: 500px;
-  font-size: 4rem;
-  line-height: 80px;
-  font-weight: 900;
-  font-family: "Playfair Display SC", serif;
+  color: rgb(0, 0, 0);
+  width: 700px;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  line-height: 50px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
   margin: 0 auto;
-  margin-top: 10vh;
+  margin-top: 20vh;
   padding: 10px 20px;
   z-index: 3;
-  transform: rotate3d(1, 1, 1, -5deg);
+  text-align: center;
   transition-duration: 0.4s;
 }
+/*
 h2::before {
   position: absolute;
   content: "";
@@ -100,10 +102,11 @@ h2::before {
   border-radius: 10px;
   z-index: -2;
   background-color: rgba(255, 255, 255, 0.281);
+  box-shadow: inset 2px -2px 10px 3px black;
 }
-
+*/
 .Button {
-  margin-top: 18vh;
+  margin-top: 14vh;
   width: 100%;
   text-align: center;
 }
@@ -115,11 +118,11 @@ a {
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 2px;
-  color: rgb(27, 53, 80);
-  border-radius: 50px;
+  color: rgb(80, 27, 27);
+
   margin: 0 auto;
   padding: 20px 40px;
-  border: 1px solid rgb(19, 48, 75);
+  border: 1px solid rgb(56, 13, 20);
   transition-duration: 0.4s;
 }
 .Welcome a:hover {
@@ -129,12 +132,14 @@ a {
   .welcomeTitle {
     background-position: center;
     padding: 20px 0;
+    height: 400px;
   }
   h2 {
     color: rgb(255, 255, 255);
     margin-left: 30px;
+    margin-top: 80px;
     width: 400px;
-    font-size: 3rem;
+    font-size: 1rem;
     line-height: 40px;
     transform: rotate3d(1, 1, 1, 0deg);
   }
@@ -143,6 +148,10 @@ a {
   }
   .Button {
     width: 500px;
+  }
+  a {
+    font-size: 0.8rem;
+    padding: 10px 15px;
   }
 }
 </style>

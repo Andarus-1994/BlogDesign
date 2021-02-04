@@ -18,7 +18,7 @@ export default {
 
 <style>
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(240, 238, 238);
   box-sizing: border-box;
   overflow-x: hidden;
 }

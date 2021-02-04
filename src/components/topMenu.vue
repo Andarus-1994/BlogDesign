@@ -121,7 +121,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .limit {
-  height: 20px;
+  height: 10px;
 }
 .topMenu {
   position: relative;
@@ -168,7 +168,7 @@ nav {
 }
 nav > .Logo {
   margin: 2px 40px;
-  color: rgb(35, 73, 90);
+  color: rgb(80, 19, 19);
   font-family: "Playfair Display SC", serif;
   font-size: 2rem;
   margin-left: 0px;
@@ -190,11 +190,11 @@ nav > ul li {
 a {
   overflow: hidden;
   position: relative;
-  color: #1c4050;
+  color: #501c1c;
   font-size: 1.15rem;
 }
 a:hover {
-  color: #3783a7;
+  color: #641b1b;
 }
 a::after {
   transition-duration: 0.4s;
@@ -202,7 +202,7 @@ a::after {
 a::after {
   content: "";
   position: absolute;
-  background-color: rgb(24, 29, 29);
+  background-color: rgb(58, 26, 26);
   opacity: 0;
   top: 23px;
   left: 0;
@@ -216,7 +216,7 @@ a::after {
 a:hover::after {
   content: "";
   position: absolute;
-  background-color: rgb(39, 91, 107);
+  background-color: rgb(97, 23, 29);
   opacity: 1;
   top: 17px;
   left: 0;
@@ -230,7 +230,7 @@ a:focus::after {
 }
 
 .active {
-  color: #184358;
+  color: #55050c;
   pointer-events: none;
 }
 .active li {
@@ -290,13 +290,13 @@ a:focus::after {
 }
 .nav > .Logo {
   margin: 6px 40px;
-  color: rgb(35, 73, 90);
+  color: rgb(70, 28, 28);
   font-family: "Playfair Display SC", serif;
   font-size: 2rem;
   margin-right: 80px;
 }
 .nav > .space {
-  width: 20%;
+  width: 10%;
 }
 .nav > ul {
   list-style-type: none;
