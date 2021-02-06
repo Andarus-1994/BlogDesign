@@ -168,7 +168,7 @@ nav {
 }
 nav > .Logo {
   margin: 2px 40px;
-  color: rgb(80, 19, 19);
+  color: #030303;
   font-family: "Playfair Display SC", serif;
   font-size: 2rem;
   margin-left: 0px;
@@ -190,7 +190,7 @@ nav > ul li {
 a {
   overflow: hidden;
   position: relative;
-  color: #501c1c;
+  color: #030303;
   font-size: 1.15rem;
 }
 a:hover {
@@ -290,7 +290,7 @@ a:focus::after {
 }
 .nav > .Logo {
   margin: 6px 40px;
-  color: rgb(70, 28, 28);
+  color: #030303;
   font-family: "Playfair Display SC", serif;
   font-size: 2rem;
   margin-right: 80px;

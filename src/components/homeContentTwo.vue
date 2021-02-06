@@ -1,6 +1,6 @@
 <template>
   <div class="homeContentTwo">
-    <h1>Blogs Diversity...</h1>
+    <h1>Blog's Diversity...</h1>
     <div v-for="(blog, index) in defaultBlogs" :key="index">
       <Cards
         :cardId="index"
@@ -58,7 +58,17 @@ export default {
 }
 h1 {
   font-family: "Martel", serif;
-  font-size: 2rem;
+  font-size: 3rem;
   color: black;
+}
+
+@media only screen and (max-width: 800px) {
+  .homeContentTwo {
+    width: 100%;
+    padding: 5px 0px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
 }
 </style>

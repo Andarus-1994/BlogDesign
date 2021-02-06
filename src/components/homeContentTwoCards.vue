@@ -43,8 +43,10 @@ export default {
   font-size: 2rem;
 }
 .Cards p {
-  margin-top: 40px;
+  margin-top: 50px;
   color: rgb(0, 0, 0);
+  text-indent: 30px;
+  text-align: justify;
   font-size: 1rem;
   line-height: 30px;
   letter-spacing: 1px;
@@ -82,24 +84,32 @@ export default {
 
 @media only screen and (max-width: 800px) {
   .Cards {
-    width: 500px;
+    width: 90%;
     flex-direction: column;
-    padding: 0;
+    padding: 0px 20px 0px 0px;
+    margin: 0 auto;
+    margin-top: 50px;
   }
   .Cards h2 {
     font-size: 1.5rem;
   }
   .Cards p {
     font-size: 0.85rem;
+    padding: 10px;
   }
   .left {
     border-radius: 20px;
-    margin-left: 20px;
+
     height: auto;
+    width: auto;
+    padding: 10px 15px;
   }
   .right {
     border-radius: 20px;
+
+    padding: 0;
     height: auto;
+    width: auto;
   }
   .Cards img {
     display: none;

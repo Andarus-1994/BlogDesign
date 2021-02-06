@@ -100,7 +100,7 @@ export default {
 }
 .Themes > ul > li a {
   text-decoration: none;
-  color: rgb(63, 18, 21);
+  color: #030303;
   transition-duration: 0.6s;
 }
 .Themes > ul > li a:hover img {
@@ -262,8 +262,12 @@ export default {
 }
 
 @media only screen and (max-width: 1000px) {
+  .Themes {
+    box-sizing: border-box;
+  }
   .Themes > ul {
-    width: 400px;
+    padding: 0;
+    width: 350px;
     height: 1000px;
     flex-direction: column;
   }
@@ -272,18 +276,23 @@ export default {
     margin: 0 auto;
   }
   .Themes > ul li:nth-child(2) ul {
+    width: 230px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-left: 0px;
+  }
+  .Themes > ul li:nth-child(2) ul li:nth-of-type(1) {
     margin-top: 40px;
-    margin-left: 10px;
   }
   .Themes > ul li:nth-child(2) ul li:nth-of-type(2) {
-    margin-top: 40px;
+    margin-top: 60px;
   }
   .Themes > ul li:nth-child(2) {
-    height: 400px;
+    height: 450px;
   }
   .Themes > ul li:nth-child(3) {
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 80px;
     height: 200px;
   }
 }

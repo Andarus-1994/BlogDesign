@@ -64,6 +64,7 @@ export default {
 }
 */
 .welcomeTitle {
+  background-color: rgb(182, 181, 180);
   background-image: url("../assets/office.jpg");
   background-size: cover;
   background-position: center;
@@ -118,7 +119,7 @@ a {
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 2px;
-  color: rgb(80, 27, 27);
+  color: #030303;
 
   margin: 0 auto;
   padding: 20px 40px;
@@ -131,14 +132,14 @@ a {
 @media only screen and (max-width: 800px) {
   .welcomeTitle {
     background-position: center;
-    padding: 20px 0;
+    padding: 0px 0;
     height: 400px;
   }
   h2 {
     color: rgb(255, 255, 255);
-    margin-left: 30px;
+    margin-left: 20px;
     margin-top: 80px;
-    width: 400px;
+    width: 270px;
     font-size: 1rem;
     line-height: 40px;
     transform: rotate3d(1, 1, 1, 0deg);
@@ -147,7 +148,7 @@ a {
     background-color: rgba(0, 0, 0, 0.418);
   }
   .Button {
-    width: 500px;
+    width: 340px;
   }
   a {
     font-size: 0.8rem;

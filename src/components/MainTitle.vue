@@ -20,7 +20,7 @@ h1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 2.5rem;
-  color: #461924;
+  color: #030303;
   margin-left: 5%;
 }
 

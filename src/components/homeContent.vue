@@ -23,7 +23,7 @@ export default {
 <style scoped>
 .homeContent {
   background-image: url("../assets/knowledge.jpg");
-  background-color: cornflowerblue;
+  background-color: rgb(88, 88, 88);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -38,7 +38,8 @@ export default {
   margin: 0 auto;
   padding: 70px 25px;
   text-align: center;
-  background-color: rgb(240, 238, 238);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px 2px rgb(29, 29, 29);
 }
 .BlogDescription h2 {
   margin-bottom: 80px;
@@ -49,10 +50,12 @@ export default {
 
 .BlogDescription p {
   font-size: 1rem;
+  text-indent: 40px;
+  text-align: justify;
   width: 70%;
   max-width: 1200px;
   margin: 0 auto;
-
+  color: rgb(36, 36, 36);
   line-height: 30px;
   letter-spacing: 2px;
 }
