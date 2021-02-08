@@ -1,12 +1,14 @@
 <template>
-  <Welcome />
-  <h1>Themes of the Blogs</h1>
-  <div class="displayThemes" ref="themesTrigger"></div>
-  <transition name="slide-fade">
-    <Themes v-if="showThemes" />
-  </transition>
-  <homeContent />
-  <homeContentTwo />
+  <div class="home">
+    <Welcome />
+    <h1>Themes of the Blogs</h1>
+    <div class="displayThemes" ref="themesTrigger"></div>
+    <transition name="slide-fade">
+      <Themes v-if="showThemes" />
+    </transition>
+    <homeContent />
+    <homeContentTwo />
+  </div>
 </template>
 
 <script>
@@ -47,6 +49,9 @@ export default {
 </script>
 
 <style scoped>
+.home {
+  width: auto;
+}
 .displayThemes {
   margin-top: 150px;
   width: 100%;

@@ -1,6 +1,8 @@
 <template>
   <div class="homeContentTwo">
     <h1>Blog's Diversity...</h1>
+    <div v-if="admin" class="AddCard" v-on:click="displayModal">+</div>
+    <AddModal v-if="showModal" :displayModal="displayModal" />
     <div v-for="(blog, index) in defaultBlogs" :key="index">
       <Cards
         :cardId="index"
@@ -14,14 +16,21 @@
 
 <script>
 import Cards from "./homeContentTwoCards";
+import AddModal from "./modalAddCard";
+import { mapGetters } from "vuex";
 
 export default {
   name: "homeContentTwo",
   components: {
     Cards,
+    AddModal,
+  },
+  computed: {
+    ...mapGetters(["admin"]),
   },
   data: () => {
     return {
+      showModal: false,
       defaultBlogs: [
         {
           name: "Traveling",
@@ -45,13 +54,24 @@ export default {
     };
   },
   created: function() {
-    console.log(this.defaultBlogs);
+    console.log("this.defaultBlogs");
+  },
+  updated: function() {
+    if (!this.admin) {
+      this.showModal = false;
+    }
+  },
+  methods: {
+    displayModal: function() {
+      this.showModal = !this.showModal;
+    },
   },
 };
 </script>
 
 <style scoped>
 .homeContentTwo {
+  position: relative;
   margin-top: 50px;
   padding: 20px 0px;
   text-align: center;
@@ -60,6 +80,24 @@ h1 {
   font-family: "Martel", serif;
   font-size: 3rem;
   color: black;
+}
+
+.AddCard {
+  cursor: pointer;
+  width: 20px;
+  margin-left: 15%;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  letter-spacing: 1px;
+  background-color: rgb(49, 15, 15);
+  border-radius: 50%;
+  box-shadow: 0px 1px 5px 0px black;
+  padding: 10px 20px;
+  transition: 0.6s;
+}
+
+.AddCard:hover {
+  background-color: rgb(100, 25, 25);
 }
 
 @media only screen and (max-width: 800px) {
