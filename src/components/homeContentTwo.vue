@@ -2,7 +2,11 @@
   <div class="homeContentTwo">
     <h1>Blog's Diversity...</h1>
     <div v-if="admin" class="AddCard" v-on:click="displayModal">+</div>
-    <AddModal v-if="showModal" :displayModal="displayModal" />
+    <AddModal
+      v-if="showModal"
+      :displayModal="displayModal"
+      :addTheme="newTheme"
+    />
     <div v-for="(blog, index) in defaultBlogs" :key="index">
       <Cards
         :cardId="index"
@@ -64,6 +68,9 @@ export default {
   methods: {
     displayModal: function() {
       this.showModal = !this.showModal;
+    },
+    newTheme: function(obj) {
+      this.defaultBlogs.push(obj);
     },
   },
 };
