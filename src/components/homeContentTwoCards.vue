@@ -1,5 +1,5 @@
 <template>
-  <div class="Cards">
+  <div class="Cards" :id="cardId % 2 === 0 ? 'left' : 'right'">
     <div class="borderLeft left" v-if="cardId % 2 === 0">
       <h2>{{ cardName }}</h2>
       <p>{{ cardDescription }}</p>
@@ -35,8 +35,38 @@ export default {
   display: flex;
   width: 800px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 0px;
   padding: 50px;
+}
+
+#left {
+  animation-delay: 0.4s;
+  animation: enter-left 2s;
+}
+#right {
+  animation-delay: 0.4s;
+  animation: enter-right 2s;
+}
+@keyframes enter-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes enter-right {
+  0% {
+    opacity: 0;
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 .Cards h2 {
   color: rgb(26, 12, 12);

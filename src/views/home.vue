@@ -60,23 +60,24 @@ export default {
 h1 {
   position: relative;
   font-family: "Martel", serif;
+  font-size: 2.5rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #461818;
+  color: rgb(20, 18, 18);
   margin-top: 100px;
 }
 h1::after {
   content: "";
   position: absolute;
-  background-color: rgb(105, 21, 28);
+  background-color: rgb(20, 18, 18);
   opacity: 1;
-  top: 50px;
+  top: 60px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 30px;
+  width: 50px;
   height: 0.2vh;
   transition-duration: 0.4s;
 }

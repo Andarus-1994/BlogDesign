@@ -7,12 +7,16 @@
       :displayModal="displayModal"
       :addTheme="newTheme"
     />
+
     <div v-for="(blog, index) in defaultBlogs" :key="index">
+      <div class="trigger" :id="index" :ref="'triggerAnimation' + index"></div>
+      <div v-if="showCard.length === 0" class="loader">Loading</div>
       <Cards
         :cardId="index"
         :cardName="blog.name"
         :cardDescription="blog.description"
         :cardImage="blog.img"
+        v-else-if="showCard[index][index]"
       />
     </div>
   </div>
@@ -35,6 +39,7 @@ export default {
   data: () => {
     return {
       showModal: false,
+      showCard: [],
       defaultBlogs: [
         {
           name: "Traveling",
@@ -57,8 +62,13 @@ export default {
       ],
     };
   },
-  created: function() {
-    console.log("this.defaultBlogs");
+  mounted() {
+    this.scrollTrigger();
+    for (var i = 0; i < this.defaultBlogs.length; i++) {
+      this.showCard.push({ [i]: false });
+    }
+    this.loadingCards = false;
+    console.log(this.showCard[2][2]);
   },
   updated: function() {
     if (!this.admin) {
@@ -71,6 +81,20 @@ export default {
     },
     newTheme: function(obj) {
       this.defaultBlogs.push(obj);
+    },
+
+    scrollTrigger() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.intersectionRatio > 0) {
+            this.showCard[entry.target.id][entry.target.id] = true;
+            console.log(entry.target.id);
+          }
+        });
+      });
+      for (var i = 0; i < this.defaultBlogs.length; i++) {
+        observer.observe(this.$refs["triggerAnimation" + i], i);
+      }
     },
   },
 };
@@ -107,6 +131,10 @@ h1 {
   background-color: rgb(100, 25, 25);
 }
 
+.trigger {
+  height: 30px;
+  background: rgb(240, 238, 238);
+}
 @media only screen and (max-width: 800px) {
   .homeContentTwo {
     width: 100%;
