@@ -68,12 +68,12 @@ export default {
       this.showCard.push({ [i]: false });
     }
     this.loadingCards = false;
-    console.log(this.showCard[2][2]);
   },
   updated: function() {
     if (!this.admin) {
       this.showModal = false;
     }
+    this.scrollTrigger();
   },
   methods: {
     displayModal: function() {
@@ -81,6 +81,7 @@ export default {
     },
     newTheme: function(obj) {
       this.defaultBlogs.push(obj);
+      this.showCard.push({ [this.defaultBlogs.length - 1]: false });
     },
 
     scrollTrigger() {
@@ -88,12 +89,11 @@ export default {
         entries.forEach((entry) => {
           if (entry.intersectionRatio > 0) {
             this.showCard[entry.target.id][entry.target.id] = true;
-            console.log(entry.target.id);
           }
         });
       });
       for (var i = 0; i < this.defaultBlogs.length; i++) {
-        observer.observe(this.$refs["triggerAnimation" + i], i);
+        observer.observe(this.$refs["triggerAnimation" + i]);
       }
     },
   },
@@ -117,6 +117,7 @@ h1 {
   cursor: pointer;
   width: 20px;
   margin-left: 15%;
+  margin-bottom: 10px;
   color: rgb(255, 255, 255);
   font-size: 2rem;
   letter-spacing: 1px;

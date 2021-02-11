@@ -1,10 +1,9 @@
 <template>
   <div class="Welcome">
     <div class="cropWelcomeTop"></div>
+    <SVG />
     <div class="welcomeTitle">
-      <h2>
-        Traveling, cooking, books, life experiences. ALL 4 in 1 Blog.
-      </h2>
+      <h2>Traveling, cooking, books, life experiences. ALL 4 in 1 Blog.</h2>
       <div class="Button">
         <router-link
           exact
@@ -21,8 +20,11 @@
 </template>
 
 <script>
+import SVG from "./welcomeSVG";
+
 export default {
   name: "Welcome",
+  components: { SVG },
 };
 </script>
 
@@ -30,7 +32,8 @@ export default {
 .Welcome {
   margin-top: 50px;
   position: relative;
-  height: 70vh;
+  height: 80vh;
+
   overflow: hidden;
 }
 /*
@@ -64,15 +67,15 @@ export default {
 }
 */
 .welcomeTitle {
-  background-color: rgb(182, 181, 180);
-  background-image: url("../assets/office.jpg");
+  background-color: rgb(240, 238, 238);
+
   background-size: cover;
   background-position: center;
   width: 100%;
   height: 100%;
   min-width: 900px;
   margin: 0 auto;
-
+  z-index: 2;
   overflow: hidden;
 }
 
@@ -80,13 +83,13 @@ h2 {
   position: relative;
   color: rgb(0, 0, 0);
   width: 700px;
-  font-size: 2rem;
+  font-size: 2.2rem;
   letter-spacing: 4px;
   line-height: 50px;
   font-weight: 300;
   font-family: "Roboto", sans-serif;
   margin: 0 auto;
-  margin-top: 20vh;
+  margin-top: 15vh;
   padding: 10px 20px;
   z-index: 3;
   text-align: center;
@@ -107,9 +110,11 @@ h2::before {
 }
 */
 .Button {
-  margin-top: 14vh;
+  position: relative;
+  margin-top: 20vh;
   width: 100%;
   text-align: center;
+  z-index: 2;
 }
 a {
   background-color: rgb(255, 255, 255);
@@ -124,6 +129,7 @@ a {
   margin: 0 auto;
   padding: 20px 40px;
   border: 1px solid rgb(56, 13, 20);
+  border-radius: 15px;
   transition-duration: 0.4s;
 }
 .Welcome a:hover {
