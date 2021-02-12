@@ -4,6 +4,7 @@
     <SVG />
     <div class="welcomeTitle">
       <h2>Traveling, cooking, books, life experiences. ALL 4 in 1 Blog.</h2>
+
       <div class="Button">
         <router-link
           exact
@@ -32,7 +33,7 @@ export default {
 .Welcome {
   margin-top: 50px;
   position: relative;
-  height: 80vh;
+  height: 70vh;
 
   overflow: hidden;
 }

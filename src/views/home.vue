@@ -1,11 +1,18 @@
 <template>
   <div class="home">
     <Welcome />
-    <h1>Themes of the Blogs</h1>
-    <div class="displayThemes" ref="themesTrigger"></div>
-    <transition name="slide-fade">
-      <Themes v-if="showThemes" />
-    </transition>
+    <kinesis-container event="scroll">
+      <kinesis-element :strength="50" :distance="50">
+        <h1>Themes of the Blogs</h1>
+      </kinesis-element>
+
+      <div class="displayThemes" ref="themesTrigger"></div>
+      <transition name="slide-fade">
+        <kinesis-element :strength="50" :distance="50">
+          <Themes v-if="showThemes" />
+        </kinesis-element>
+      </transition>
+    </kinesis-container>
     <homeContent />
     <homeContentTwo />
   </div>
@@ -16,6 +23,7 @@ import Themes from "../components/themes.vue";
 import Welcome from "../components/Welcome.vue";
 import homeContent from "../components/homeContent.vue";
 import homeContentTwo from "../components/homeContentTwo.vue";
+import { KinesisContainer, KinesisElement } from "vue-kinesis";
 export default {
   name: "Home",
   data: () => {
@@ -44,6 +52,8 @@ export default {
     Welcome,
     homeContent,
     homeContentTwo,
+    KinesisContainer,
+    KinesisElement,
   },
 };
 </script>
@@ -53,7 +63,7 @@ export default {
   width: auto;
 }
 .displayThemes {
-  margin-top: 150px;
+  margin-top: 100px;
   width: 100%;
   height: 10px;
 }
@@ -65,7 +75,7 @@ h1 {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: rgb(20, 18, 18);
-  margin-top: 100px;
+  margin-top: 50px;
 }
 h1::after {
   content: "";
