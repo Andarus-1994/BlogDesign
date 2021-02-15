@@ -1,5 +1,8 @@
 <template>
   <div class="Cards" :id="cardId % 2 === 0 ? 'left' : 'right'">
+    <div class="deleteCard" v-on:click="deleteCard(cardId)" v-if="admin">
+      &#10006;
+    </div>
     <div class="borderLeft left" v-if="cardId % 2 === 0">
       <h2>{{ cardName }}</h2>
       <p>{{ cardDescription }}</p>
@@ -19,24 +22,54 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "Cards",
   props: {
+    deleteCard: Function,
     cardId: Number,
     cardName: String,
     cardDescription: String,
     cardImage: String,
+  },
+  computed: {
+    ...mapGetters(["admin"]),
   },
 };
 </script>
 
 <style scoped>
 .Cards {
+  position: relative;
   display: flex;
   width: 800px;
   margin: 0 auto;
   margin-top: 0px;
   padding: 50px;
+}
+
+.deleteCard {
+  position: absolute;
+  background: rgb(175, 15, 15);
+  font-size: 1.5rem;
+  color: white;
+  border-radius: 50%;
+  border-top: 1px solid rgb(255, 255, 255);
+  padding: 5px 5px 10px 5px;
+  top: 27px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35px;
+  height: 28px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.deleteCard:hover {
+  background: rgb(226, 39, 39);
+  transform: rotate(20deg);
 }
 
 #left {

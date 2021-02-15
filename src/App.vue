@@ -29,6 +29,5 @@ body {
   color: #2c3e50;
   padding: 0;
   margin: 0;
-  height: 2500px;
 }
 </style>

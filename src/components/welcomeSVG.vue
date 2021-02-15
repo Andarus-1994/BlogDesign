@@ -16,7 +16,7 @@
           ><cc:Work rdf:about=""
             ><dc:format>image/svg+xml</dc:format
             ><dc:type
-              rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work
+              rdf:resource="http://purl.org/dc/dcmitype/StillImage"/></cc:Work
         ></rdf:RDF>
       </metadata>
       <defs id="defs6" />
@@ -2622,7 +2622,7 @@ svg {
 }
 
 .itemleaf {
-  animation: item-leaf-anim 10s alternate-reverse infinite linear;
+  animation: item-leaf-anim 10s infinite linear;
 }
 
 @keyframes item-leaf-anim {

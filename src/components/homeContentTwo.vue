@@ -16,6 +16,7 @@
         :cardName="blog.name"
         :cardDescription="blog.description"
         :cardImage="blog.img"
+        :deleteCard="deleteTheme"
         v-else-if="showCard[index][index]"
       />
     </div>
@@ -83,6 +84,10 @@ export default {
       this.defaultBlogs.push(obj);
       this.showCard.push({ [this.defaultBlogs.length - 1]: false });
     },
+    deleteTheme: function(index) {
+      this.defaultBlogs.splice(index, 1);
+      console.log(this.defaultBlogs);
+    },
 
     scrollTrigger() {
       const observer = new IntersectionObserver((entries) => {
@@ -121,7 +126,7 @@ h1 {
   color: rgb(255, 255, 255);
   font-size: 2rem;
   letter-spacing: 1px;
-  background-color: rgb(49, 15, 15);
+  background-color: rgb(70, 158, 52);
   border-radius: 50%;
   box-shadow: 0px 1px 5px 0px black;
   padding: 10px 20px;
@@ -129,7 +134,7 @@ h1 {
 }
 
 .AddCard:hover {
-  background-color: rgb(100, 25, 25);
+  background-color: rgb(9, 80, 15);
 }
 
 .trigger {

@@ -15,6 +15,7 @@
     </kinesis-container>
     <homeContent />
     <homeContentTwo />
+    <homeFooter />
   </div>
 </template>
 
@@ -23,6 +24,7 @@ import Themes from "../components/themes.vue";
 import Welcome from "../components/Welcome.vue";
 import homeContent from "../components/homeContent.vue";
 import homeContentTwo from "../components/homeContentTwo.vue";
+import homeFooter from "../components/homeFooter.vue";
 import { KinesisContainer, KinesisElement } from "vue-kinesis";
 export default {
   name: "Home",
@@ -46,12 +48,14 @@ export default {
   },
   mounted() {
     this.scrollTrigger();
+    window.scrollTo(0, 0);
   },
   components: {
     Themes,
     Welcome,
     homeContent,
     homeContentTwo,
+    homeFooter,
     KinesisContainer,
     KinesisElement,
   },

@@ -84,10 +84,10 @@ h2 {
   position: relative;
   color: rgb(0, 0, 0);
   width: 700px;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   letter-spacing: 4px;
   line-height: 50px;
-  font-weight: 300;
+  font-weight: 600;
   font-family: "Roboto", sans-serif;
   margin: 0 auto;
   margin-top: 15vh;
@@ -126,15 +126,15 @@ a {
   font-weight: 500;
   letter-spacing: 2px;
   color: #030303;
-
   margin: 0 auto;
-  padding: 20px 40px;
+  padding: 15px 30px;
   border: 1px solid rgb(56, 13, 20);
-  border-radius: 15px;
+  border-radius: 5px;
   transition-duration: 0.4s;
 }
 .Welcome a:hover {
-  background-color: rgb(229, 230, 233);
+  background-color: rgb(36, 13, 14);
+  color: white;
 }
 @media only screen and (max-width: 800px) {
   .welcomeTitle {

@@ -242,7 +242,7 @@ a:focus::after {
   position: fixed;
   top: 0px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px -2px 8px 1px rgb(22, 32, 53);
+  border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;

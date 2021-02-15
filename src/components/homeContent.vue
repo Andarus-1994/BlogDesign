@@ -22,7 +22,7 @@ export default {
 
 <style scoped>
 .homeContent {
-  background-image: url("../assets/knowledge.jpg");
+  background-image: url("../assets/blogUp.jpg");
   background-color: rgb(88, 88, 88);
   background-attachment: fixed;
   background-size: cover;
@@ -34,28 +34,29 @@ export default {
 }
 
 .BlogDescription {
-  width: 80%;
+  width: 60%;
+  min-width: 300px;
   margin: 0 auto;
-  padding: 70px 25px;
+  padding: 50px 10px;
   text-align: center;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 0px 10px 2px rgb(29, 29, 29);
+  box-shadow: 0px 0px 8px 0px rgb(32, 58, 107);
 }
 .BlogDescription h2 {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   letter-spacing: 2px;
-  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
   color: rgb(3, 3, 3);
 }
 
 .BlogDescription p {
   font-size: 1rem;
+  padding: 10px 80px;
   text-indent: 40px;
   text-align: justify;
-  width: 70%;
-  max-width: 1200px;
   margin: 0 auto;
-  color: rgb(36, 36, 36);
+  color: rgb(48, 47, 47);
   line-height: 30px;
   letter-spacing: 2px;
 }
@@ -66,8 +67,9 @@ export default {
   }
   .BlogDescription p {
     width: auto;
-    line-height: 30px;
-    font-size: 0.85rem;
+    line-height: 25px;
+    padding: 10px;
+    font-size: 0.8rem;
   }
 }
 </style>
