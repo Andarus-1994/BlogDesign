@@ -1,17 +1,33 @@
 <template>
-  <MainTitle />
-  <topMenu />
+  <Loader v-if="!loadPage" />
+  <MainTitle v-if="loadPage" />
+  <topMenu v-if="loadPage" />
 </template>
 
 <script>
 import topMenu from "./components/topMenu.vue";
 import MainTitle from "./components/MainTitle.vue";
-
+import Loader from "./components/pageLoad.vue";
 export default {
   name: "App",
+  data: () => {
+    return {
+      loadPage: false,
+    };
+  },
   components: {
     topMenu,
     MainTitle,
+    Loader,
+  },
+  mounted() {
+    document.onreadystatechange = () => {
+      setTimeout(() => {
+        if (document.readyState == "complete") {
+          this.loadPage = true;
+        }
+      }, 1000);
+    };
   },
 };
 </script>

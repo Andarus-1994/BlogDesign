@@ -3,20 +3,20 @@
     <ul>
       <li>
         <router-link to="#">
-          <img src="../assets/knowledge.jpg" />
+          <img src="../assets/mountains.jpg" />
+          <h2>Traveling</h2>
+          <p>New awesome place</p>
+        </router-link>
+      </li>
+      <li>
+        <router-link to="#">
+          <img src="../assets/read.jpg" />
 
           <h2>Reading</h2>
           <p>Hey that is the book</p>
         </router-link>
       </li>
 
-      <li>
-        <router-link to="#">
-          <img src="../assets/mountains.jpg" />
-          <h2>Traveling</h2>
-          <p>New awesome place</p>
-        </router-link>
-      </li>
       <li>
         <router-link to="#">
           <img src="../assets/cooks.jpg" />
@@ -48,23 +48,24 @@ export default {
   list-style-type: none;
   padding-left: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-column-gap: 30px;
   grid-row-gap: 100px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 100px;
   padding-bottom: 100px;
 }
 .newsHeader ul li {
   position: relative;
-  max-height: 350px;
+  max-height: 400px;
 }
 
 .newsHeader ul li img {
+  object-fit: cover;
   background: rgb(60, 60, 68);
   width: 100%;
   border-radius: 5px;
-  height: 80%;
+  height: 70%;
 }
 
 .newsHeader ul li h2 {
@@ -74,7 +75,7 @@ export default {
   color: rgb(75, 74, 74);
   padding-left: 5px;
   margin-top: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 .newsHeader ul li p {
   color: rgb(19, 19, 24);

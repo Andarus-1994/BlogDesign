@@ -1,5 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Home from "@/views/home.vue";
+import Blogs from "@/views/blogs.vue";
 import News from "@/views/news.vue";
 import Events from "@/views/events.vue";
 import NotFound from "@/views/notFound.vue";
@@ -19,6 +20,11 @@ const routes = [
     path: "/events",
     name: "Events",
     component: Events,
+  },
+  {
+    path: "/blogs",
+    name: "Blogs",
+    component: Blogs,
   },
   {
     path: "/:catchAll(.*)",

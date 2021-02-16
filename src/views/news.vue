@@ -23,7 +23,12 @@ export default {
 
 <style scoped>
 h1 {
-  color: black;
   text-align: center;
+  margin-top: 100px;
+  font-family: "Martel", serif;
+  font-size: 3.5rem;
+  color: rgb(34, 32, 32);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 </style>

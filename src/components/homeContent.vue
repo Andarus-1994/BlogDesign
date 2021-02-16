@@ -62,6 +62,9 @@ export default {
 }
 
 @media only screen and (max-width: 800px) {
+  .homeContent {
+    background: #a8a8b8;
+  }
   .BlogDescription h2 {
     font-size: 2rem;
   }
