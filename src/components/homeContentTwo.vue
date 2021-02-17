@@ -9,7 +9,12 @@
     />
 
     <div v-for="(blog, index) in defaultBlogs" :key="index">
-      <div class="trigger" :id="index" :ref="'triggerAnimation' + index"></div>
+      <div
+        v-show="index === 0 || showCard[index - 1]"
+        class="trigger"
+        :id="index"
+        :ref="'triggerAnimation' + index"
+      ></div>
       <div v-if="showCard.length === 0" class="loader">Loading</div>
       <Cards
         :cardId="index"

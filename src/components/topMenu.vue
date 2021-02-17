@@ -241,8 +241,8 @@ a:focus::after {
 .nav {
   position: fixed;
   top: 0px;
-  background-color: rgb(255, 255, 255);
-  border-bottom: 1px solid black;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgb(182, 177, 177);
   display: flex;
   justify-content: space-between;
   margin: 0 auto;

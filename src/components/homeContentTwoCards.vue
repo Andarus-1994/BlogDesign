@@ -73,11 +73,9 @@ export default {
 }
 
 #left {
-  animation-delay: 0.4s;
   animation: enter-left 2s;
 }
 #right {
-  animation-delay: 0.4s;
   animation: enter-right 2s;
 }
 @keyframes enter-left {

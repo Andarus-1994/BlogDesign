@@ -107,8 +107,11 @@ export default {
   position: fixed;
   background-color: rgb(255, 255, 255);
   width: 500px;
-  height: 60vh;
-  top: 150px;
+  height: 600px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
   left: 0;
   right: 0;
   margin-left: auto;

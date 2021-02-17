@@ -33,8 +33,7 @@ export default {
 .Welcome {
   margin-top: 50px;
   position: relative;
-  height: 70vh;
-
+  height: 700px;
   overflow: hidden;
 }
 /*
