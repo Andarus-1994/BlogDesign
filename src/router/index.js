@@ -4,6 +4,7 @@ import Blogs from "@/views/blogs.vue";
 import News from "@/views/news.vue";
 import Events from "@/views/events.vue";
 import NotFound from "@/views/notFound.vue";
+import newsContent from "@/components/newsContent.vue";
 
 const routes = [
   {
@@ -16,6 +17,7 @@ const routes = [
     name: "News",
     component: News,
   },
+  { path: "/news/:id", component: newsContent },
   {
     path: "/events",
     name: "Events",

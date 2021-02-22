@@ -53,7 +53,13 @@ export default {
 
 <style scoped>
 .homeFooter {
-  background: #9d9dac;
+  background: -webkit-linear-gradient(
+    180deg,
+    rgb(240, 238, 238) 5%,
+    rgb(5, 43, 58)
+  );
+  background: linear-gradient(180deg, rgb(240, 238, 238), rgb(13, 51, 65));
+  /*background: #7d7d92; */
   color: rgb(31, 29, 29);
   margin-top: 200px;
   position: relative;
@@ -126,6 +132,7 @@ h1 {
 .containerFooter ul a:hover {
   margin-top: -4px;
 }
+
 .containerFooter ul a:hover li::before {
   background: rgb(38, 36, 43);
 }

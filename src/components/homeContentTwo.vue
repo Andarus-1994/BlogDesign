@@ -143,7 +143,8 @@ h1 {
 }
 
 .trigger {
-  height: 30px;
+  margin-top: 20px;
+  height: 50px;
   background: rgb(240, 238, 238);
 }
 @media only screen and (max-width: 800px) {

@@ -120,6 +120,8 @@ h1 {
 }
 
 .blogsHeader .container > ul li img {
+  background: rgb(240, 238, 238);
+  box-shadow: inset 2px 2px 2px 2px black;
   width: 100%;
   height: 100%;
   object-fit: cover;

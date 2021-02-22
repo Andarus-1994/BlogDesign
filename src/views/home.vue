@@ -79,7 +79,7 @@ h1 {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: rgb(20, 18, 18);
-  margin-top: 50px;
+  margin-top: 10px;
 }
 h1::after {
   content: "";

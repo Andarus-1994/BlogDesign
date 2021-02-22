@@ -22,11 +22,10 @@ export default {
 
 <style scoped>
 .homeContent {
-  background-image: url("../assets/blogUp.jpg");
-  background-color: rgb(88, 88, 88);
+  background-image: url("../assets/BGcontent.jpg");
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  background-color: rgb(240, 238, 238);
   position: relative;
   margin-top: 150px;
   padding: 200px 0px;

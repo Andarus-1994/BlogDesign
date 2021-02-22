@@ -1,5 +1,5 @@
 const state = {
-  admin: true,
+  admin: false,
 };
 
 const getters = {

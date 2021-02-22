@@ -19,4 +19,5 @@ createApp(App)
   .use(router)
   .use(VueKinesis)
   .use(FontAwesomeIcon)
+
   .mount("#app");

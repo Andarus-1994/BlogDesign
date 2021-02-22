@@ -2,14 +2,14 @@
   <div class="newsHeader">
     <ul>
       <li>
-        <router-link to="#">
+        <router-link to="/news/1">
           <img src="../assets/mountains.jpg" />
           <h2>Traveling</h2>
           <p>New awesome place</p>
         </router-link>
       </li>
       <li>
-        <router-link to="#">
+        <router-link to="/news/2">
           <img src="../assets/read.jpg" />
 
           <h2>Reading</h2>
@@ -26,7 +26,7 @@
       </li>
       <li>
         <router-link to="#">
-          <img src="../assets/cityLife.jpg" />
+          <img src="../assets/cityLife.jpg" alt="loading" />
           <h2>Life</h2>
           <p>How to escape the city life</p>
         </router-link>
@@ -62,7 +62,8 @@ export default {
 
 .newsHeader ul li img {
   object-fit: cover;
-  background: rgb(60, 60, 68);
+  background: rgb(240, 238, 238);
+  box-shadow: inset 2px 2px 2px 2px black;
   width: 100%;
   border-radius: 5px;
   height: 70%;
