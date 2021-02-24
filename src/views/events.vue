@@ -1,10 +1,22 @@
 <template>
-  <h1>Aici e Events</h1>
+  <div>
+    <EventsContent />
+    <homeFooter />
+  </div>
 </template>
 
 <script>
+import EventsContent from "../components/eventsContent.vue";
+import homeFooter from "../components/homeFooter.vue";
 export default {
   name: "Events",
+  components: {
+    EventsContent,
+    homeFooter,
+  },
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 

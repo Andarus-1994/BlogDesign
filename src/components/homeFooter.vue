@@ -55,10 +55,10 @@ export default {
 .homeFooter {
   background: -webkit-linear-gradient(
     180deg,
-    rgb(240, 238, 238) 5%,
-    rgb(5, 43, 58)
+    rgb(240, 238, 238),
+    rgb(10, 45, 59)
   );
-  background: linear-gradient(180deg, rgb(240, 238, 238), rgb(13, 51, 65));
+  background: linear-gradient(180deg, rgb(240, 238, 238), rgb(10, 45, 59));
   /*background: #7d7d92; */
   color: rgb(31, 29, 29);
   margin-top: 200px;

@@ -39,7 +39,7 @@ export default {
   padding: 50px 10px;
   text-align: center;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 0px 8px 0px rgb(32, 58, 107);
+  box-shadow: 0px 0px 8px 2px rgb(13, 28, 54);
 }
 .BlogDescription h2 {
   margin-bottom: 50px;

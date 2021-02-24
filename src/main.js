@@ -12,6 +12,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import Moment from "moment";
 
 library.add(faFacebook, faTwitter, faInstagram, faLinkedin);
 createApp(App)
@@ -19,5 +20,5 @@ createApp(App)
   .use(router)
   .use(VueKinesis)
   .use(FontAwesomeIcon)
-
+  .use(Moment)
   .mount("#app");
