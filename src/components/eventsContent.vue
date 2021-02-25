@@ -6,6 +6,12 @@
       <p>{{ event.name }}</p>
       <h3>{{ event.hour }}</h3>
     </div>
+    <div class="event">
+      <h2>Upcoming date...</h2>
+
+      <p>Upcoming event name...</p>
+      <h3>Upcoming time...</h3>
+    </div>
   </div>
 </template>
 
@@ -60,26 +66,38 @@ export default {
 .eventsContent {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
   width: 80%;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 20vh;
 }
 .event {
-  background: rgb(87, 129, 165);
-  padding: 30px;
+  border: 1px solid rgb(161, 160, 160);
+  padding: 120px 20px;
   text-align: center;
+  letter-spacing: 2px;
   font-family: "Roboto";
+  transition: 0.6s;
+}
+
+.event:hover {
+  background: black;
+}
+.event:hover h2,
+.event:hover p,
+.event:hover h3 {
+  color: white;
 }
 .event h2 {
-  color: rgb(43, 42, 42);
-  font-size: 1.5rem;
+  color: rgb(41, 40, 40);
+  font-size: 1rem;
 }
 .event p {
   color: black;
   font-size: 2rem;
   font-weight: 600;
+  text-transform: uppercase;
   margin: 30px 0;
 }
 

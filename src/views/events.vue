@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Events</h1>
     <EventsContent />
     <homeFooter />
   </div>
@@ -22,11 +23,12 @@ export default {
 
 <style scoped>
 h1 {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Martel", serif;
+  font-size: 3.5rem;
+  color: rgb(34, 32, 32);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 140px;
 }
 </style>
