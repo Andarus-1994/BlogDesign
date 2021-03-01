@@ -37,14 +37,19 @@
         <img src="../assets/read.jpg" />
       </div>
     </section>
+    <homeFooter />
   </div>
 </template>
 
 <script>
+import homeFooter from "../components/homeFooter.vue";
 export default {
   name: "newsContent",
   mounted() {
     window.scrollTo(0, 0);
+  },
+  components: {
+    homeFooter,
   },
 };
 </script>
@@ -56,7 +61,9 @@ export default {
   height: 1000px;
 }
 .newsContent h2 {
+  margin-top: 5vh;
   font-size: 2rem;
+  color: black;
 }
 .containerNews {
   display: inline-block;

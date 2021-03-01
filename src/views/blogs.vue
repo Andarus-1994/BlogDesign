@@ -30,11 +30,19 @@ export default {
           img: "decorate.jpg",
           idTheme: 0,
         },
+
         {
           Title: "CREATING A NURTURING ENVIRONMENT IN YOUR HOME",
           Text:
             "The home is supposed to be a refuge from the world, where you can relax and recharge. But if it’s dirty or full of clutter, it may be more of a source of stress than of healing. ",
           img: "homeFeel.jpg",
+          idTheme: 0,
+        },
+        {
+          Title: "MY MORNING COFFEE - How important is for...",
+          Text:
+            "A large part of our lives is actually made up of routines and rituals. Every morning we wake up, we perform these little actions which are familiar to us and this keeps us “grounded”, making us feel like we are in control and helping us to keep going. A morning coffee ritual is no different and those who have introduced it to their schedule know that it makes getting out of bed easier when you know that a hot drink is waiting for you to make it in the kitchen.",
+          img: "morningCoffee.jpg",
           idTheme: 0,
         },
         {

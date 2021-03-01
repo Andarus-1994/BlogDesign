@@ -58,7 +58,7 @@ export default {
     rgb(240, 238, 238),
     rgb(10, 45, 59)
   );
-  background: linear-gradient(180deg, rgb(240, 238, 238), rgb(10, 45, 59));
+  background: rgb(218, 216, 216);
   /*background: #7d7d92; */
   color: rgb(31, 29, 29);
   margin-top: 200px;
@@ -73,6 +73,7 @@ h1 {
   font-size: 3rem;
   font-weight: 900;
   letter-spacing: 2px;
+
   text-align: center;
 }
 
@@ -103,6 +104,7 @@ h1 {
 }
 .containerFooter ul li {
   position: relative;
+  color: black;
   font-size: 2rem;
   letter-spacing: 1px;
   margin: 0 15px;
@@ -112,7 +114,7 @@ h1 {
 .containerFooter ul li::before {
   content: "";
   position: absolute;
-  background: #39393d;
+  background: #708894;
   top: -5px;
   left: 0;
   right: 0;
@@ -134,7 +136,7 @@ h1 {
 }
 
 .containerFooter ul a:hover li::before {
-  background: rgb(38, 36, 43);
+  background: rgb(71, 67, 82);
 }
 
 .containerFooter .socials > ul a svg {

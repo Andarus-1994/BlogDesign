@@ -12,14 +12,22 @@
       <p>Upcoming event name...</p>
       <h3>Upcoming time...</h3>
     </div>
+    <div class="event new" v-if="admin" v-on:click="newEvent">
+      <h2>Add new event</h2>
+      <p>+</p>
+      <h3>Add new event</h3>
+    </div>
   </div>
 </template>
 
 <script>
 import moment from "moment";
+import { mapGetters } from "vuex";
 export default {
   name: "eventsContent",
-
+  computed: {
+    ...mapGetters(["admin"]),
+  },
   data: () => {
     return {
       eventsList: [
@@ -58,6 +66,13 @@ export default {
     convertDate: function(date) {
       return moment(Date.parse(date)).format("MMMM Do YYYY");
     },
+    newEvent() {
+      this.eventsList.push({
+        name: "Fan meeting Test",
+        date: "2021/7/14",
+        hour: "1:30PM",
+      });
+    },
   },
 };
 </script>
@@ -68,17 +83,19 @@ export default {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-column-gap: 50px;
   grid-row-gap: 50px;
+  grid-auto-rows: 1fr;
   width: 80%;
   margin: 0 auto;
   margin-top: 20vh;
 }
 .event {
+  position: relative;
   border: 1px solid rgb(161, 160, 160);
   padding: 120px 20px;
   text-align: center;
   letter-spacing: 2px;
   font-family: "Roboto";
-  transition: 0.6s;
+  transition: 0.8s;
 }
 
 .event:hover {
@@ -104,5 +121,20 @@ export default {
 .event h3 {
   font-size: 1rem;
   color: rgb(31, 30, 30);
+}
+.new {
+  cursor: pointer;
+  animation: 2s enter;
+}
+
+@keyframes enter {
+  0% {
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 </style>

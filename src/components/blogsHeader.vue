@@ -72,6 +72,7 @@ h1 {
   display: flex;
   list-style-type: none;
   width: 80%;
+  min-height: 100%;
   max-height: 500px;
   padding: 0;
   margin: 0 auto;
@@ -80,6 +81,7 @@ h1 {
 }
 .blogsHeader .container > ul li {
   width: 50%;
+  flex: 1;
 }
 
 .blogsHeader .container > ul li:nth-of-type(2) {
